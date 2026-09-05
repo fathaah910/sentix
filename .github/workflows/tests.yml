@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+
   pull_request:
     branches:
       - main
@@ -26,14 +27,10 @@ jobs:
           python-version: ${{ matrix.python-version }}
 
       - name: Upgrade pip
-        run: |
-          python -m pip install --upgrade pip
+        run: python -m pip install --upgrade pip
 
       - name: Install Sentix and dependencies
-        run: |
-          pip install -e .
-          pip install pytest
+        run: python -m pip install -e .
 
       - name: Run tests
-        run: |
-          pytest
+        run: python -m pytest
