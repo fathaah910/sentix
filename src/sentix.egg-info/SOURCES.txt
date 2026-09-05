@@ -1,9 +1,11 @@
+LICENSE
 README.md
 pyproject.toml
 src/sentix/__init__.py
 src/sentix/analyzer.py
 src/sentix/certainty.py
 src/sentix/confidence.py
+src/sentix/explanation.py
 src/sentix/normalize.py
 src/sentix/result.py
 src/sentix/scorer.py
@@ -19,7 +21,9 @@ src/sentix/lexicon/emotion.py
 src/sentix/lexicon/phrases.py
 src/sentix/lexicon/sentiment.py
 src/sentix/rules/aspect.py
+src/sentix/rules/conditional.py
 src/sentix/rules/context.py
+src/sentix/rules/contradiction.py
 src/sentix/rules/contrast.py
 src/sentix/rules/emotion.py
 src/sentix/rules/intensity.py
@@ -27,4 +31,5 @@ src/sentix/rules/negation.py
 src/sentix/rules/normalize.py
 src/sentix/rules/phrases.py
 src/sentix/rules/repetition.py
+src/sentix/rules/reversal.py
 tests/test_sentiment.py

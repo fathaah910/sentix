@@ -54,13 +54,13 @@ Repository = "https://github.com/fathaah910/sentix"
 Issues = "https://github.com/fathaah910/sentix/issues"
 
 
-[tool.setuptools.package-dir]
-"" = "src"
+# Tells setuptools that packages are inside src/
+[tool.setuptools]
+package-dir = {"" = "src"}
 
 
 [tool.setuptools.packages.find]
 where = ["src"]
-include = ["sentix*"]
 
 
 [tool.pytest.ini_options]
