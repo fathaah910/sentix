@@ -1,0 +1,64 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "sentix"
+version = "1.0.0"
+description = "A lightweight and explainable rule-based sentiment analysis library for Python"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+
+authors = [
+    {name = "Abdul Fathah"}
+]
+
+keywords = [
+    "sentiment-analysis",
+    "nlp",
+    "natural-language-processing",
+    "sentiment",
+    "text-analysis",
+    "emotion-analysis",
+    "python"
+]
+
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+
+    "License :: OSI Approved :: MIT License",
+
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Text Processing",
+    "Topic :: Text Processing :: Linguistic"
+]
+
+dependencies = []
+
+
+[project.urls]
+Homepage = "https://github.com/YOUR-USERNAME/sentix"
+Repository = "https://github.com/YOUR-USERNAME/sentix"
+Issues = "https://github.com/YOUR-USERNAME/sentix/issues"
+
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["sentix*"]
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
