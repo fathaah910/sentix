@@ -35,14 +35,24 @@ jobs:
       - name: Upgrade pip
         run: python -m pip install --upgrade pip
 
-      - name: Install Sentix
-        run: python -m pip install -e .
+      - name: Show project structure
+        run: |
+          pwd
+          ls -la
+          find src -maxdepth 3 -type f
+
+      - name: Install package
+        run: |
+          python -m pip install -e .
+          python -m pip show sentix
+
+      - name: Verify Sentix import
+        run: |
+          python -c "import sys; print(sys.path)"
+          python -c "import sentix; print(sentix.__file__)"
 
       - name: Install pytest
         run: python -m pip install pytest
 
-      - name: Verify package
-        run: python -c "import sentix; print(sentix.__file__)"
-
-      - name: Run tests
+      - name: Run pytest
         run: python -m pytest

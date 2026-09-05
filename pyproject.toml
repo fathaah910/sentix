@@ -7,13 +7,17 @@ build-backend = "setuptools.build_meta"
 name = "sentix"
 version = "1.0.0"
 description = "A lightweight and explainable rule-based sentiment analysis library for Python"
+
 readme = "README.md"
+
 requires-python = ">=3.9"
+
 license = {text = "MIT"}
 
 authors = [
     {name = "Abdul Fathah"}
 ]
+
 
 keywords = [
     "sentiment-analysis",
@@ -24,6 +28,7 @@ keywords = [
     "emotion-analysis",
     "python"
 ]
+
 
 classifiers = [
     "Development Status :: 5 - Production/Stable",
@@ -45,6 +50,7 @@ classifiers = [
     "Topic :: Text Processing :: Linguistic"
 ]
 
+
 dependencies = []
 
 
@@ -54,14 +60,23 @@ Repository = "https://github.com/fathaah910/sentix"
 Issues = "https://github.com/fathaah910/sentix/issues"
 
 
-# Tells setuptools that packages are inside src/
+# ============================================================
+# SETUPTOOLS CONFIGURATION
+# Your package is located inside src/sentix
+# ============================================================
+
 [tool.setuptools]
 package-dir = {"" = "src"}
 
 
 [tool.setuptools.packages.find]
 where = ["src"]
+include = ["sentix*"]
 
+
+# ============================================================
+# PYTEST CONFIGURATION
+# ============================================================
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
